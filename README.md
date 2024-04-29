@@ -6,7 +6,8 @@ GET
 /HumanInterests
 
 ---
-/HumanInterests/{id}
+/HumanInterests/{id} 
+
 Get all connections, links and interests, connected to a person ID
 
 
