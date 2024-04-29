@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Labb3API.Models.Human>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HumanName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HumanEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HumanNickname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HumanRandomQuote)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HumanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HumanEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HumanNickname)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.HumanRandomQuote)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HumanId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HumanId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HumanId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

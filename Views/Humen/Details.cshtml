@@ -1,0 +1,42 @@
+﻿@model Labb3API.Models.Human
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Human</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HumanName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HumanName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HumanEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HumanEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HumanNickname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HumanNickname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HumanRandomQuote)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HumanRandomQuote)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.HumanId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

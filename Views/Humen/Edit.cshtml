@@ -1,0 +1,49 @@
+﻿@model Labb3API.Models.Human
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Human</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HumanId" />
+            <div class="form-group">
+                <label asp-for="HumanName" class="control-label"></label>
+                <input asp-for="HumanName" class="form-control" />
+                <span asp-validation-for="HumanName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HumanEmail" class="control-label"></label>
+                <input asp-for="HumanEmail" class="form-control" />
+                <span asp-validation-for="HumanEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HumanNickname" class="control-label"></label>
+                <input asp-for="HumanNickname" class="form-control" />
+                <span asp-validation-for="HumanNickname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HumanRandomFact" class="control-label"></label>
+                <input asp-for="HumanRandomFact" class="form-control" />
+                <span asp-validation-for="HumanRandomFact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
